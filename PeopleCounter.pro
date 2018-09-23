@@ -25,11 +25,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    mainwindowm.cpp
+    mainwindowm.cpp \
+    camviewer.cpp
 
 HEADERS += \
         mainwindow.h \
-    mainwindowm.h
+    mainwindowm.h \
+    camviewer.h
 
 FORMS += \
         mainwindow.ui \
@@ -43,3 +45,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     MainUIWindown.py
+QT_CONFIG -= no-pkg-config
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv
